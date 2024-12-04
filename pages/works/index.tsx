@@ -2,7 +2,6 @@ import Head from "next/head";
 import worksJson from "./works.json";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import React, { useRef, useState } from "react";
-import Image from "next/image";
 
 const Works = () => {
   const works = worksJson;
@@ -10,7 +9,7 @@ const Works = () => {
   const worksContainerRef = useRef<HTMLDivElement>(null);
   const [clickMeClicked, setClickMeClicked] = useState(false);
   const { scrollXProgress } = useScroll({
-    container: worksContainerRef
+    container: worksContainerRef,
   });
 
   const useParallax = (value: MotionValue<number>, distance: number) => {
@@ -22,7 +21,7 @@ const Works = () => {
   const toggleWorkType = () => {
     worksContainerRef.current?.scroll({
       left: worksContainerRef.current.offsetWidth,
-      behavior: "smooth"
+      behavior: "smooth",
     });
     setClickMeClicked(true);
   };
@@ -32,7 +31,7 @@ const Works = () => {
       className="w-11/12 max-w-sm overflow-x-hidden lg:max-w-2xl"
       variants={{
         hidden: { opacity: 0, x: 0, y: 200 },
-        enter: { opacity: 1, x: 0, y: 0 }
+        enter: { opacity: 1, x: 0, y: 0 },
       }}
       initial="hidden"
       animate="enter"
@@ -50,8 +49,8 @@ const Works = () => {
             <motion.span
               variants={{
                 hover: {
-                  scale: 0
-                }
+                  scale: 0,
+                },
               }}
               style={{
                 originX: 0,
@@ -59,7 +58,7 @@ const Works = () => {
                 position: "absolute",
                 top: "50%",
                 translateY: "-50%",
-                left: "90%"
+                left: "90%",
               }}
               className={`flex min-w-max items-center rounded-md bg-sky-300 p-2 text-sm font-bold text-white shadow-md dark:bg-teal-300 ${clickMeClicked && "hidden"}`}
             >
@@ -87,7 +86,7 @@ const Works = () => {
                 <WorkCard
                   key={i}
                   href={work.href}
-                  imgSrc={work.imgSrc} // Gunakan imgSrc
+                  imgSrc={work.imgSrc}
                   title={work.title}
                   description={work.description}
                   icons={work.icons}
@@ -102,7 +101,7 @@ const Works = () => {
 
 interface workCardProps {
   href: string;
-  imgSrc: string;  // imgSrc tidak lagi optional
+  imgSrc: string;
   title: string;
   description: string;
   icons?: string[];
@@ -110,8 +109,15 @@ interface workCardProps {
 
 const WorkCard = ({ imgSrc, title, description, href, icons }: workCardProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   return (
-    <motion.a draggable={false} whileHover="hover" className="group rounded-md p-4 hover:bg-neutral-200 dark:hover:bg-zinc-800" target="_blank" href={href}>
+    <motion.a
+      draggable={false}
+      whileHover="hover"
+      className="group rounded-md p-4 hover:bg-neutral-200 dark:hover:bg-zinc-800"
+      target="_blank"
+      href={href}
+    >
       <div className="flex justify-center">
         <motion.div className="flex h-36 rounded-md overflow-hidden relative justify-center w-fit group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400">
           <motion.img
@@ -130,6 +136,17 @@ const WorkCard = ({ imgSrc, title, description, href, icons }: workCardProps) =>
         <motion.p variants={{ hover: { scale: 1.05 } }} className="text-center dark:text-neutral-200 text-neutral-800">
           {description}
         </motion.p>
+
+        {/* Display icons if available */}
+        {icons && icons.length > 0 && (
+          <div className="mt-4 flex space-x-4">
+            {icons.map((icon, index) => (
+              <div key={index} className="h-8 w-8">
+                <img src={`/path/to/icons/${icon}`} alt="icon" />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </motion.a>
   );

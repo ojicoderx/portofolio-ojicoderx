@@ -71,83 +71,30 @@ const Home: NextPage = () => {
           About
         </h3>
         <p className="text-justify tracking-wide dark:text-neutral-200 text-neutral-800">
-          Ojicoderx is a backend programmer specializing in building reliable APIs, managing databases, and ensuring application security. He is dedicated to creating scalable and efficient tech solutions.
+          ojicoderx is a backend programmer specializing in building reliable APIs, managing databases, and ensuring application security. He is dedicated to creating scalable and efficient tech solutions.
         </p>
-      </div>
-      {/* Bio */}
-      <div className="mt-4 flex flex-col">
-        <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-800 after:dark:bg-zinc-500">
-          Bio
-        </h3>
-        <div className="grid grid-cols-[1fr_3fr] gap-4">
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2003</div>
-          <p className="dark:text-neutral-200 text-neutral-800">Born in Tokyo (東京), Japan.</p>
-
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2021</div>
-          <p className="dark:text-neutral-200 text-neutral-800">
-            Started studying Computer Science at University of Auckland
-          </p>
-
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2021 to present</div>
-          <p className="dark:text-neutral-200 text-neutral-800">
-            Working as a frontend engineer at{" "}
-            <a
-              draggable={false}
-              className="inline-block origin-bottom-right indent-0 text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
-              href="https://kekeno.tech/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Kekeno Tech
-            </a>
-          </p>
-
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2022 Summer</div>
-          <p className="dark:text-neutral-200 text-neutral-800">
-            Working as a Frontend engineer at University of Auckland helping a
-            research project called&nbsp;
-            <a
-              draggable={false}
-              className="inline-block origin-bottom-right indent-0 text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
-              href="https://habits.school/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Habits
-            </a>
-          </p>
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2023 Nov</div>
-          <p className="dark:text-neutral-200 text-neutral-800">
-            Completed Bachelor of Science (Computer Science) at University of Auckland
-          </p>
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2024 Feb</div>
-          <p className="dark:text-neutral-200 text-neutral-800">
-            Started studying Master of Information Technology at University of New South Wales
-          </p>
-        </div>
       </div>
       {/* Social media */}
       <div className="mt-4 flex flex-col">
         <h3
           className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-800 after:dark:bg-zinc-500">
-          On the web
+          Social Media
         </h3>
         <div className="flex flex-col">
           <MediaLink
             icon={() => <FaWhatsapp />}
             text="@keisuke-hara"
-            mediaLink="https://www.linkedin.com/in/keisuke-hara/"
+            mediaLink="https://wa.me/6283170801193"
           />
           <MediaLink
             icon={() => <FaGithub />}
             text="@keiHara"
-            mediaLink="https://github.com/KeiHara"
+            mediaLink="https://github.com/ojicoderx"
           />
           <MediaLink
             icon={() => <FaInstagram />}
             text="@kei.9241"
-            mediaLink="https://www.instagram.com/kei.9241/"
+            mediaLink="https://www.instagram.com/ojiwzrd_"
           />
         </div>
       </div>

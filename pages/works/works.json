@@ -1,6 +1,6 @@
 [
   {
-    "href": "https://codecritters.live/",
+    "href": "https://acawai.vercel.app/",
     "imgSrc": "work_imgs/code-critters/14cfb37d-6bf6-44a1-94ae-09dbe990cedb.png",
     "title": "AcawAI CHAT",
     "description": "Template Chat Ai Menggunakan Html, Css, Js, Dengan Tampilan Seperti Gemini",
@@ -101,57 +101,6 @@
       "spring-boot.svg",
       "docker.svg",
       "gcp.svg"
-    ]
-  },
-  {
-    "href": "https://play.google.com/store/apps/details?id=com.kekeno.ida",
-    "imgSrcs": [
-      "work_imgs/ida/ida-app1.png",
-      "work_imgs/ida/ida-app2.png",
-      "work_imgs/ida/ida-app3.png"
-    ],
-    "imgSrc": "work_imgs/ida.png",
-    "title": "IDA App",
-    "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors.",
-    "type": "app",
-    "icons": [
-      "angular.svg",
-      "ionic.svg",
-      "spring-boot.svg"
-    ]
-  },
-  {
-    "imgSrcs": [
-      "work_imgs/headstrong/headstrong1.png",
-      "work_imgs/headstrong/headstrong2.png",
-      "work_imgs/headstrong/headstrong3.png"
-    ],
-    "href": "https://play.google.com/store/apps/details?id=nz.co.uniservices.habitsmessenger",
-    "imgSrc": "",
-    "title": "Headstrong",
-    "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform.",
-    "type": "app",
-    "icons": [
-      "angular.svg",
-      "ionic.svg",
-      "spring-boot.svg"
-    ]
-  },
-  {
-    "imgSrcs": [
-      "work_imgs/mmca/mmca1.png",
-      "work_imgs/mmca/mmca2.png",
-      "work_imgs/mmca/mmca3.png"
-    ],
-    "href": "",
-    "imgSrc": "",
-    "title": "MMCA",
-    "description": "A mobile app for mood tracking which can be monitored on the Habits platform.",
-    "type": "app",
-    "icons": [
-      "angular.svg",
-      "ionic.svg",
-      "spring-boot.svg"
     ]
   }
 ]

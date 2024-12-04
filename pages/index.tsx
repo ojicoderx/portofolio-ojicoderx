@@ -149,7 +149,7 @@ const Home: NextPage = () => {
         </h3>
         <div className="flex flex-col">
           <MediaLink
-            icon={() => <FaLinkedin />}
+            icon={() => <FaWhatsapp />}
             text="@keisuke-hara"
             mediaLink="https://www.linkedin.com/in/keisuke-hara/"
           />

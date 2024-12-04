@@ -71,21 +71,7 @@ const Home: NextPage = () => {
           About
         </h3>
         <p className="text-justify tracking-wide dark:text-neutral-200 text-neutral-800">
-          Keisuke is a incoming masters student studying Master of Information Technology at the
-          University of New South Wales. He is passionate
-          about taking on opportunities to improve his web development skills
-          actively. He is currently working as a Frontend engineer / Mobile app
-          developer at{" "}
-          <a
-            draggable={false}
-            className="inline-block origin-bottom-right indent-0 tracking-wide text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
-            href="https://kekeno.tech/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Kekeno Tech
-          </a>
-          , developing a variety of projects.
+          Ojicoderx is a backend programmer specializing in building reliable APIs, managing databases, and ensuring application security. He is dedicated to creating scalable and efficient tech solutions.
         </p>
       </div>
       {/* Bio */}

@@ -9,12 +9,10 @@ const Works = () => {
   const titleRef = useRef<HTMLButtonElement>(null);
   const worksContainerRef = useRef<HTMLDivElement>(null);
   const webappContainerRef = useRef<HTMLDivElement>(null);
-  const [isApp, setIsApp] = useState(false);
+  const [clickMeClicked, setClickMeClicked] = useState(false);
   const { scrollXProgress } = useScroll({
     container: worksContainerRef
   });
-
-  const [clickMeClicked, setClickMeClicked] = useState(false);
 
   const useParallax = (value: MotionValue<number>, distance: number) => {
     return useTransform(value, [0, 1], [0, -distance]);
@@ -22,14 +20,7 @@ const Works = () => {
 
   const y = useParallax(scrollXProgress, 28);
 
-  useEffect(() => {
-    scrollXProgress.onChange((value) => {
-      // No need to change isApp value anymore
-    });
-  });
-
   const toggleWorkType = () => {
-    // Removed toggling between "website" and "mobile app"
     worksContainerRef.current?.scroll({
       left: worksContainerRef.current.offsetWidth,
       behavior: "smooth"
@@ -72,9 +63,11 @@ const Works = () => {
                 position: "absolute",
                 top: "50%",
                 translateY: "-50%",
-                left: "90%" // Always show the website section
+                left: "90%" // Dihapus kondisi 'isApp' dan disederhanakan
               }}
-              className={`flex min-w-max items-center rounded-md bg-sky-300 p-2 text-sm font-bold text-white shadow-md dark:bg-teal-300 ${clickMeClicked && "hidden"}`}
+              className={`flex min-w-max items-center rounded-md bg-sky-300 p-2 text-sm font-bold text-white shadow-md  dark:bg-teal-300 ${
+                clickMeClicked && "hidden"
+              }`}
             >
               <div className="absolute left-0 inline-block w-2 -translate-x-full overflow-hidden">
                 <div className="h-3 origin-top-right -rotate-45 transform bg-sky-300  dark:bg-teal-300"></div>
@@ -104,7 +97,7 @@ const Works = () => {
             className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4"
           >
             {works
-              .filter((work) => work.type === "website")
+              .filter((work) => work.type === "website") // Menampilkan hanya "website"
               .map((work, i) => (
                 <WorkCard
                   key={i}
@@ -196,24 +189,6 @@ const WorkCard = ({
               alt="img"
               draggable={false}
             />
-          )}
-          {imgSrcs === undefined && (
-            <div
-              className="absolute grid grid-cols-6 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
-              {icons?.map((icon, i) => (
-                <div
-                  key={i}
-                  className={`h-8 aspect-square 
-                  ${(icons?.length % 3 === 2 && (i === icons.length - 2 || i === icons.length - 1)) && "col-span-3"} 
-                  ${(icons?.length % 3 === 2 && (i !== icons.length - 2 && i !== icons.length - 1)) && "col-span-2"} 
-                  ${(icons.length === 4) && "col-span-3"} 
-                  ${(icons?.length === 1) && "col-span-6"} 
-                  ${icons?.length % 3 === 0 && "col-span-2"}`
-                  }>
-                  <Image width="100%" height="100%" src={`/tech-icons/${icon}`} />
-                </div>
-              ))}
-            </div>
           )}
         </motion.div>
       </div>

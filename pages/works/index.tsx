@@ -157,15 +157,17 @@ const WorkCard = ({
         }
       }}
       href={href}
-    >
-      <div className="flex justify-center">
-          <motion.img
-            onLoad={() => setIsLoaded(true)}
-            className={`rounded-md group-hover:blur-sm ${!isLoaded ?? "blur-sm"}}`}
-            src={imgSrc}
-            alt="img"
-            draggable={false}
-          />
+                    <div
+                      className="flex overflow-hidden rounded-md group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400 relative"
+                key={i}>
+                <motion.img
+                  onLoad={() => setIsLoaded(true)}
+                  key={i}
+                  className={`rounded-md group-hover:blur-sm ${!isLoaded ?? "blur-sm"}}`}
+                  src={src}
+                  alt="img"
+                  draggable={false}
+                />
                           {!(icons) || icons[i] && (
                   <div
                     className="absolute grid grid-cols-1 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">

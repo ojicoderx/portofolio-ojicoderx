@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import profile from "../public/profile_pic.jpg";
-import { FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import { createElement } from "react";
 import Head from "next/head";

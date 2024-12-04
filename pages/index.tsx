@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import profile from "../public/profile_pic.jpg";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import { createElement } from "react";
 import Head from "next/head";
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
                 alt="prof-pic"
                 draggable={false}
               />
-              <FaLinkedin
+              <FaWhatsapp
                 className="invisible absolute text-white opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100"
                 size={28}
               />
@@ -149,7 +149,7 @@ const Home: NextPage = () => {
         </h3>
         <div className="flex flex-col">
           <MediaLink
-            icon={() => <FaLinkedin />}
+            icon={() => <FaWhatsapp />}
             text="@keisuke-hara"
             mediaLink="https://www.linkedin.com/in/keisuke-hara/"
           />

@@ -178,7 +178,7 @@ const WorkCard = ({
             <div
               className="absolute grid grid-cols-1 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
               <div className="h-8 aspect-square">
-                <Image width="100%" height="100%" src={`/tech-icons/${icons[0]}`} />
+                <Image width="100%" height="100%" src={`/tech-icons/${icons[i]}`} />
               </div>
             </div>
           )}

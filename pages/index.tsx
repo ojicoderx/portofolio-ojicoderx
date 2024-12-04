@@ -83,17 +83,17 @@ const Home: NextPage = () => {
         <div className="flex flex-col">
           <MediaLink
             icon={() => <FaWhatsapp />}
-            text="@keisuke-hara"
+            text="WhatsApp"
             mediaLink="https://wa.me/6283170801193"
           />
           <MediaLink
             icon={() => <FaGithub />}
-            text="@keiHara"
+            text="Github"
             mediaLink="https://github.com/ojicoderx"
           />
           <MediaLink
             icon={() => <FaInstagram />}
-            text="@kei.9241"
+            text="Instagram"
             mediaLink="https://www.instagram.com/ojiwzrd_"
           />
         </div>

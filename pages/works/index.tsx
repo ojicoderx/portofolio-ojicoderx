@@ -115,7 +115,7 @@ const Works = () => {
                 <WorkCard
                   key={i}
                   href={work.href}
-                  imgSrc={work.imgSrc} // Gunakan imgSrc di sini
+                  imgSrc={work.imgSrc}
                   title={work.title}
                   description={work.description}
                   icons={work.icons}
@@ -130,21 +130,20 @@ const Works = () => {
 
 interface workCardProps {
   href: string;
-  imgSrc: string; // Hanya imgSrc
+  imgSrc: string;
   title: string;
   description: string;
   icons?: string[];
 }
 
 const WorkCard = ({
-  imgSrc,
-  title,
-  description,
-  href,
-  icons
-}: workCardProps) => {
+                    imgSrc,
+                    title,
+                    description,
+                    href,
+                    icons
+                  }: workCardProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   return (
     <motion.a
       draggable={false}
@@ -161,7 +160,7 @@ const WorkCard = ({
     >
       <div className="flex justify-center">
         <motion.div
-          className="flex h-36 rounded-md overflow-hidden relative justify-center w-fit group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400"
+          className={`flex h-36 rounded-md overflow-hidden relative justify-center w-fit group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400`}
           variants={{
             hover: {
               scale: 1.05
@@ -169,21 +168,18 @@ const WorkCard = ({
           }}
         >
           <motion.img
-            className="rounded-md duration-200 ease-linear group-hover:blur-sm"
-            src={imgSrc} // Hanya imgSrc
+            onLoad={() => setIsLoaded(true)}
+            className={`rounded-md group-hover:blur-sm ${!isLoaded ?? "blur-sm"}}`}
+            src={imgSrc}
             alt="img"
             draggable={false}
           />
-          {icons && (
-            <div className="absolute grid grid-cols-6 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
-              {icons.map((icon, i) => (
-                <div
-                  key={i}
-                  className={`h-8 aspect-square ${(icons?.length % 3 === 2 && (i === icons.length - 2 || i === icons.length - 1)) && "col-span-3"}`}
-                >
-                  <Image width="100%" height="100%" src={`/tech-icons/${icon}`} />
-                </div>
-              ))}
+          {!(icons) || icons && (
+            <div
+              className="absolute grid grid-cols-1 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
+              <div className="h-8 aspect-square">
+                <Image width="100%" height="100%" src={`/tech-icons/${icons[0]}`} />
+              </div>
             </div>
           )}
         </motion.div>

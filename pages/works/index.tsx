@@ -174,12 +174,40 @@ const WorkCard = ({
             alt="img"
             draggable={false}
           />
-          {!(icons) || icons[i] && (
-            <div
-              className="absolute grid grid-cols-1 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
-              <div className="h-8 aspect-square">
-                <Image width="100%" height="100%" src={`/tech-icons/${icons[i]}`} />
+                          {!(icons) || icons[i] && (
+                  <div
+                    className="absolute grid grid-cols-1 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
+                    <div className="h-8 aspect-square">
+                      <Image width="100%" height="100%" src={`/tech-icons/${icons[i]}`} />
+                    </div>
+                  </div>
+                )}
               </div>
+            ))
+          ) : (
+            <motion.img
+              className="rounded-md duration-200 ease-linear group-hover:blur-sm"
+              src={imgSrc}
+              alt="img"
+              draggable={false}
+            />
+          )}
+          {imgSrcs === undefined && (
+            <div
+              className="absolute grid grid-cols-6 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
+              {icons?.map((icon, i) => (
+                <div
+                  key={i}
+                  className={`h-8 aspect-square 
+                  ${(icons?.length % 3 === 2 && (i === icons.length - 2 || i === icons.length - 1)) && "col-span-3"} 
+                  ${(icons?.length % 3 === 2 && (i !== icons.length - 2 && i !== icons.length - 1)) && "col-span-2"} 
+                  ${(icons.length === 4) && "col-span-3"} 
+                  ${(icons?.length === 1) && "col-span-6"} 
+                  ${icons?.length % 3 === 0 && "col-span-2"}`
+                  }>
+                  <Image width="100%" height="100%" src={`/tech-icons/${icon}`} />
+                </div>
+              ))}
             </div>
           )}
         </motion.div>

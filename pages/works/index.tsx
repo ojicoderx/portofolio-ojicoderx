@@ -1,20 +1,37 @@
 import Head from "next/head";
 import worksJson from "./works.json";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const Works = () => {
   const works = worksJson;
   const titleRef = useRef<HTMLButtonElement>(null);
   const worksContainerRef = useRef<HTMLDivElement>(null);
-  const [clickMeClicked, setClickMeClicked] = useState(false);
-
+  const webappContainerRef = useRef<HTMLDivElement>(null);
+  const appContainerRef = useRef<HTMLDivElement>(null);
+  const [isApp, setIsApp] = useState(false);
   const { scrollXProgress } = useScroll({
     container: worksContainerRef
   });
 
-  const [isApp, setIsApp] = useState(false);
+  const [clickMeClicked, setClickMeClicked] = useState(false);
+
+  const useParallax = (value: MotionValue<number>, distance: number) => {
+    return useTransform(value, [0, 1], [0, -distance]);
+  };
+
+  const y = useParallax(scrollXProgress, 28);
+
+  useEffect(() => {
+    scrollXProgress.onChange((value) => {
+      if (value === 0) {
+        setIsApp(false);
+      } else if (value === 1) {
+        setIsApp(true);
+      }
+    });
+  });
 
   const toggleWorkType = () => {
     if (isApp) {
@@ -83,9 +100,16 @@ const Works = () => {
               className="h-7 cursor-pointer overflow-hidden"
             >
               <motion.h3
+                style={{ y }}
                 className="w-fit text-xl font-bold dark:text-neutral-200 text-neutral-800"
               >
                 Website
+              </motion.h3>
+              <motion.h3
+                style={{ y }}
+                className="w-fit text-xl font-bold dark:text-neutral-200 text-neutral-800"
+              >
+                Mobile App
               </motion.h3>
             </button>
           </motion.div>
@@ -95,11 +119,29 @@ const Works = () => {
           className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto py-4"
         >
           <motion.div
-            ref={worksContainerRef}
+            ref={webappContainerRef}
             className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4"
           >
             {works
               .filter((work) => work.type === "website")
+              .map((work, i) => (
+                <WorkCard
+                  key={i}
+                  href={work.href}
+                  imgSrcs={work.imgSrcs}
+                  imgSrc={work.imgSrc}
+                  title={work.title}
+                  description={work.description}
+                  icons={work.icons}
+                />
+              ))}
+          </motion.div>
+          <motion.div
+            ref={appContainerRef}
+            className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4"
+          >
+            {works
+              .filter((work) => work.type === "app")
               .map((work, i) => (
                 <WorkCard
                   key={i}

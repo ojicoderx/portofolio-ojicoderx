@@ -159,14 +159,6 @@ const WorkCard = ({
       href={href}
     >
       <div className="flex justify-center">
-        <motion.div
-          className={`flex h-36 rounded-md overflow-hidden relative justify-center w-fit group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400`}
-          variants={{
-            hover: {
-              scale: 1.05
-            }
-          }}
-        >
           <motion.img
             onLoad={() => setIsLoaded(true)}
             className={`rounded-md group-hover:blur-sm ${!isLoaded ?? "blur-sm"}}`}

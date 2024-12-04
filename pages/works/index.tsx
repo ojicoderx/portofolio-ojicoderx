@@ -9,7 +9,6 @@ const Works = () => {
   const titleRef = useRef<HTMLButtonElement>(null);
   const worksContainerRef = useRef<HTMLDivElement>(null);
   const webappContainerRef = useRef<HTMLDivElement>(null);
-  const appContainerRef = useRef<HTMLDivElement>(null);
   const [isApp, setIsApp] = useState(false);
   const { scrollXProgress } = useScroll({
     container: worksContainerRef
@@ -25,26 +24,16 @@ const Works = () => {
 
   useEffect(() => {
     scrollXProgress.onChange((value) => {
-      if (value === 0) {
-        setIsApp(false);
-      } else if (value === 1) {
-        setIsApp(true);
-      }
+      // No need to change isApp value anymore
     });
   });
 
   const toggleWorkType = () => {
-    if (isApp) {
-      worksContainerRef.current?.scroll({
-        left: 0,
-        behavior: "smooth"
-      });
-    } else {
-      worksContainerRef.current?.scroll({
-        left: worksContainerRef.current.offsetWidth,
-        behavior: "smooth"
-      });
-    }
+    // Removed toggling between "website" and "mobile app"
+    worksContainerRef.current?.scroll({
+      left: worksContainerRef.current.offsetWidth,
+      behavior: "smooth"
+    });
     setClickMeClicked(true);
   };
 
@@ -83,11 +72,9 @@ const Works = () => {
                 position: "absolute",
                 top: "50%",
                 translateY: "-50%",
-                left: isApp ? "120%" : "90%"
+                left: "90%" // Always show the website section
               }}
-              className={`flex min-w-max items-center rounded-md bg-sky-300 p-2 text-sm font-bold text-white shadow-md  dark:bg-teal-300 ${
-                clickMeClicked && "hidden"
-              }`}
+              className={`flex min-w-max items-center rounded-md bg-sky-300 p-2 text-sm font-bold text-white shadow-md dark:bg-teal-300 ${clickMeClicked && "hidden"}`}
             >
               <div className="absolute left-0 inline-block w-2 -translate-x-full overflow-hidden">
                 <div className="h-3 origin-top-right -rotate-45 transform bg-sky-300  dark:bg-teal-300"></div>
@@ -105,12 +92,6 @@ const Works = () => {
               >
                 Website
               </motion.h3>
-              <motion.h3
-                style={{ y }}
-                className="w-fit text-xl font-bold dark:text-neutral-200 text-neutral-800"
-              >
-                Mobile App
-              </motion.h3>
             </button>
           </motion.div>
         </div>
@@ -124,24 +105,6 @@ const Works = () => {
           >
             {works
               .filter((work) => work.type === "website")
-              .map((work, i) => (
-                <WorkCard
-                  key={i}
-                  href={work.href}
-                  imgSrcs={work.imgSrcs}
-                  imgSrc={work.imgSrc}
-                  title={work.title}
-                  description={work.description}
-                  icons={work.icons}
-                />
-              ))}
-          </motion.div>
-          <motion.div
-            ref={appContainerRef}
-            className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4"
-          >
-            {works
-              .filter((work) => work.type === "app")
               .map((work, i) => (
                 <WorkCard
                   key={i}

@@ -1,4 +1,4 @@
- [
+[
   {
     "href": "https://acawai.vercel.app/",
     "imgSrc": "work_imgs/code-critters/14cfb37d-6bf6-44a1-94ae-09dbe990cedb.png",
@@ -55,4 +55,14 @@
   },
   {
     "href": "https://www.tirohia.co.nz/",
-    "imgSrc": "work_imgs/tiro
+    "imgSrc": "work_imgs/tiro.png",
+    "title": "Tiro",
+    "description": "An advanced assessment tool for youth and community evaluation.",
+    "type": "website",
+    "icons": [
+      "vue.svg",
+      "tailwind.svg",
+      "firebase.svg"
+    ]
+  }
+]

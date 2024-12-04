@@ -1,7 +1,7 @@
 import Head from "next/head";
 import worksJson from "./works.json";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 
 const Works = () => {

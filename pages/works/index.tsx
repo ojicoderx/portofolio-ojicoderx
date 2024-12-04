@@ -9,7 +9,6 @@ const Works = () => {
   const titleRef = useRef<HTMLButtonElement>(null);
   const worksContainerRef = useRef<HTMLDivElement>(null);
   const webappContainerRef = useRef<HTMLDivElement>(null);
-  const appContainerRef = useRef<HTMLDivElement>(null);
   const [isApp, setIsApp] = useState(false);
   const { scrollXProgress } = useScroll({
     container: worksContainerRef

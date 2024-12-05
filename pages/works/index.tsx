@@ -109,7 +109,7 @@ const Works = () => {
                 style={{ y }}
                 className="w-fit text-xl font-bold dark:text-neutral-200 text-neutral-800"
               >
-                Detail
+                Source
               </motion.h3>
             </button>
           </motion.div>

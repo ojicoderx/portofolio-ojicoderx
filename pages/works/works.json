@@ -11,6 +11,16 @@
       "js.svg"
     ]
   },
+  {
+    "href": "",
+    "imgSrc": "work_imgs/scbot/20241120-200542-2.jpg",
+    "title": "Sc Bot Wa AkaneAI",
+    "description": "Simple WhatsApp Bot AkaneAI, Di Buat Menggunakan Nodejs Dan Baileys Dari @whiskeysocket/baileys Version Latest",
+    "type": "website",
+    "icons": [
+      "nodejs.svg"
+    ]
+  },
     {
     "href": "https://acawapi.vercel.app/",
     "imgSrc": "work_imgs/musescore-scraper/ssweb (1).png",
@@ -36,6 +46,19 @@
       "html.svg",
       "css.svg",
       "js.svg"
+    ]
+  },
+  {
+    "imgSrcs": [
+      "work_imgs/scbot/Screenshot_20241124-171143_1.png"
+    ],
+    "href": "https://shorturl.oredigital.shop/DWkSPRsq",
+    "imgSrc": "AkaneALT",
+    "title": "Script Bot Wa AkaneAI",
+    "description": "Script Bot AkaneAI Free ( ENC ), Jika Ingin Mendapatkan No Enc Dan Free Update silahkan Berlangganan Di Oredigital.shop",
+    "type": "app",
+    "icons": [
+      "nodejs.svg"
     ]
   },
   {

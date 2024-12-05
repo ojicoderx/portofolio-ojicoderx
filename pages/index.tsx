@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import profile from "../public/IMG-20240714-WA0099_transcpr.jpg";
+import profile from "../public/20241205_104244.jpg";
 import { FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import { createElement } from "react";

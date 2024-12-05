@@ -8,10 +8,10 @@ const TopNav = () => {
   useEffect(() => {
     switch (router.asPath) {
       case "/":
-        setPageTitle("About me");
+        setPageTitle("About Me");
         break;
-      case "/works":
-        setPageTitle("My Works");
+      case "/project":
+        setPageTitle("My Project");
         break;
     }
   }, [router.pathname]);

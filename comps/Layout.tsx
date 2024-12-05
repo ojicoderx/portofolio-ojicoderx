@@ -9,6 +9,10 @@ interface props {
   children: JSX.Element
 }
 
+const LazyVoxelDog = dynamic(() => import('./voxel-dog'), {
+  ssr: false,
+});
+
 const Layout = ({ children }: props) => {
   const [isMobile, setIsMobile] = useState(false)
 

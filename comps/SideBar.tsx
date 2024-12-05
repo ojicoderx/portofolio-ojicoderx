@@ -100,7 +100,7 @@ const SideBar = () => {
         </a>
       </Link>
       <a
-        href="https://github.com/KeiHara/nextjs-portofolio"
+        href="https://github.com/ojicoderx"
         target="_blank"
         rel="noreferrer"
       >

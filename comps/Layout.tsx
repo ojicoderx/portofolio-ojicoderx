@@ -1,17 +1,11 @@
 import SideBar from "./SideBar";
 import TopNav from "./TopNav";
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-import VoxelDogLoader from "./voxel-dog-loader";
 import BottomNav from "./BottomNav";
 
 interface props {
   children: JSX.Element
 }
-
-const LazyVoxelDog = dynamic(() => import('./voxel-dog'), {
-  ssr: false,
-});
 
 const Layout = ({ children }: props) => {
   const [isMobile, setIsMobile] = useState(false)
@@ -31,9 +25,6 @@ const Layout = ({ children }: props) => {
         <div className="flex flex-col">
           <TopNav />
           <div className="scrollbar h-[calc(100vh-4.5rem)] overflow-auto pb-[72px] sm:h-screen sm:pb-0 sm:pt-[4.5rem]">
-            <div className="mt-16 flex justify-center">
-              <LazyVoxelDog />
-            </div>
             <div className="relative">{children}</div>
           </div>
           {isMobile ? <BottomNav /> : <div></div>}

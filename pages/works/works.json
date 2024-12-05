@@ -21,21 +21,21 @@
       "nodejs.svg"
     ]
   },
-  {
-    "href": "https://acaw.my.id",
-    "imgSrc": "work_imgs/code-critters/ssweb (3).png",
-    "title": "Api AcawAI",
-    "description": "Project AcawAI, Ai Chat Menggunakan Library groq-sdk, Karna Kalo Openai Kelimit terus🤫",
-    "type": "website",
-    "icons": [
-      "nodejs.svg"
-    ]
-  },
     {
     "href": "https://acawapi.vercel.app/",
     "imgSrc": "work_imgs/musescore-scraper/ssweb (1).png",
     "title": "AcawAPI",
     "description": "Website Rest Api, Dengan Menggunakan Nodejs dan Expressjs, Dengan Berbagai Endpoint Menarik ✨",
+    "type": "website",
+    "icons": [
+      "nodejs.svg"
+    ]
+  },
+  {
+    "href": "https://acaw.my.id",
+    "imgSrc": "work_imgs/code-critters/ssweb (3).png",
+    "title": "Api AcawAI",
+    "description": "Project AcawAI, Ai Chat Menggunakan Library groq-sdk, Karna Kalo Openai Kelimit terus🤫",
     "type": "website",
     "icons": [
       "nodejs.svg"

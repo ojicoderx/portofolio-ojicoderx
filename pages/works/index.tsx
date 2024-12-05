@@ -59,7 +59,7 @@ const Works = () => {
       animate="enter"
     >
       <Head>
-        <title>My works</title>
+        <title>OJI | PROJECT</title>
       </Head>
       <div className="flex w-full flex-col items-center">
         <div className="mb-2 mt-3 flex w-full">
@@ -92,7 +92,7 @@ const Works = () => {
               <div className="absolute left-0 inline-block w-2 -translate-x-full overflow-hidden">
                 <div className="h-3 origin-top-right -rotate-45 transform bg-sky-300  dark:bg-teal-300"></div>
               </div>
-              Click me!
+              Geser 👉
             </motion.span>
             <button
               onClick={() => toggleWorkType()}
@@ -109,7 +109,7 @@ const Works = () => {
                 style={{ y }}
                 className="w-fit text-xl font-bold dark:text-neutral-200 text-neutral-800"
               >
-                Mobile App
+                Detail
               </motion.h3>
             </button>
           </motion.div>

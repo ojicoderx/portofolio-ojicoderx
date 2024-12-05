@@ -27,83 +27,6 @@
     ]
   },
   {
-    "href": "https://youthchat.co.nz/",
-    "imgSrc": "work_imgs/youthchat/youthchat.png",
-    "title": "Youthchat",
-    "description": "An Electronic Case Finding and Help Assessment Tool for Youth",
-    "type": "website",
-    "icons": [
-      "dotnet.svg",
-      "tailwind.svg",
-      "docker.svg",
-      "gcp.svg"
-    ]
-  },
-  {
-    "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
-    "imgSrc": "work_imgs/ida/ida-survey-page.png",
-    "title": "IDA Survey",
-    "description": "A survey platform and admin dashboard for the IDA project.",
-    "type": "website",
-    "icons": [
-      "angular.svg",
-      "tailwind.svg",
-      "daisyui.svg",
-      "docker.svg",
-      "gcp.svg"
-    ]
-  },
-  {
-    "href": "https://www.tirohia.co.nz/",
-    "imgSrc": "work_imgs/tirohia/tirohia.png",
-    "title": "Tirohia",
-    "description": "Habits rebranded!",
-    "type": "website",
-    "icons": [
-      "angular.svg",
-      "spring-boot.svg",
-      "docker.svg",
-      "gcp.svg"
-    ]
-  },
-  {
-    "href": "https://habits.school/",
-    "imgSrc": "work_imgs/habits/habits.png",
-    "title": "Habits",
-    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research).",
-    "type": "website",
-    "icons": [
-      "angular.svg",
-      "spring-boot.svg",
-      "docker.svg",
-      "gcp.svg"
-    ]
-  },
-  {
-    "href": "https://devs.org.nz",
-    "imgSrc": "work_imgs/devs/devs.png",
-    "title": "Devs",
-    "description": "An Website for the University of Auckland's biggest Software Development Club.",
-    "type": "website",
-    "icons": [
-      "gatsby.svg",
-      "netlify.svg"
-    ]
-  },
-  {
-    "href": "https://www.tekaha.co.nz/",
-    "imgSrc": "work_imgs/tekaha/tekaha.png",
-    "title": "Tekaha",
-    "description": "A platform for the Tekaha community to connect and socialize.",
-    "type": "website",
-    "icons": [
-      "angular.svg",
-      "spring-boot.svg",
-      "docker.svg",
-      "gcp.svg"
-    ]
-  },
-  {
     "href": "https://github.com/ojicoderx/AcawCHAT",
     "imgSrcs": [
       "work_imgs/code-critters/Screenshot_20241205-112325_1.png",
@@ -118,23 +41,6 @@
       "html.svg",
       "css.svg",
       "js.svg"
-    ]
-  },
-  {
-    "imgSrcs": [
-      "work_imgs/headstrong/headstrong1.png",
-      "work_imgs/headstrong/headstrong2.png",
-      "work_imgs/headstrong/headstrong3.png"
-    ],
-    "href": "https://play.google.com/store/apps/details?id=nz.co.uniservices.habitsmessenger",
-    "imgSrc": "",
-    "title": "Headstrong",
-    "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform.",
-    "type": "app",
-    "icons": [
-      "angular.svg",
-      "ionic.svg",
-      "spring-boot.svg"
     ]
   },
   {

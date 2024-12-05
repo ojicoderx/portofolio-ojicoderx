@@ -10,7 +10,7 @@ const TopNav = () => {
       case "/":
         setPageTitle("About Me");
         break;
-      case "/project":
+      case "/works":
         setPageTitle("My Project");
         break;
     }

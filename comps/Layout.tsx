@@ -28,7 +28,7 @@ const Layout = ({ children }: props) => {
             {/* Gambar di bagian atas */}
             <div className="mt-16 flex justify-center">
               <img 
-                src="https://pomf2.lain.la/f/bbpa0ud1.png" 
+                src="https://pomf2.lain.la/f/mvoaa05b.png" 
                 alt="Top Image"
                 className="max-w-full h-auto"
               />

@@ -40,19 +40,17 @@
   },
   {
     "imgSrcs": [
-      "work_imgs/mmca/mmca1.png",
-      "work_imgs/mmca/mmca2.png",
-      "work_imgs/mmca/mmca3.png"
+      "work_imgs/mmca/Screenshot_20241205-114138_1.png",
+      "work_imgs/mmca/Screenshot_20241205-114133_1.png",
+      "work_imgs/mmca/Screenshot_20241205-114128_1.png"
     ],
-    "href": "",
-    "imgSrc": "",
-    "title": "MMCA",
-    "description": "A mobile app for mood tracking which can be monitored on the Habits platform.",
+    "href": "https://app.midtrans.com/payment-links/1733375714833",
+    "imgSrc": "AcawAPIPNG",
+    "title": "Source AcawAPI",
+    "description": "Source AcawAPI, Di buat dengan Nodejs Dan ExpressJs",
     "type": "app",
     "icons": [
-      "angular.svg",
-      "ionic.svg",
-      "spring-boot.svg"
+      "nodejs.svg"
     ]
   }
 ]

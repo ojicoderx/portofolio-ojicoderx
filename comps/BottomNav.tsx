@@ -90,7 +90,7 @@ const BottomNav = () => {
       </Link>
       <a
         className="h-full"
-        href="https://github.com/KeiHara/nextjs-portofolio"
+        href="https://github.com/ojicoderx"
         target="_blank"
         rel="noreferrer">
         <SideBarIcon
